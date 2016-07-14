@@ -30,6 +30,7 @@
 
 - (IBAction)loginButtonPressed:(UIButton *)sender {
     [[NXOAuth2AccountStore sharedStore] requestAccessToAccountWithType:@"Instagram"];
+    
     _logoutButton.enabled = YES;
     _refreshButton.enabled = YES;
     _loginButton.enabled = NO;

@@ -28,8 +28,6 @@
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(nonnull NSURL *)url options:(nonnull NSDictionary<NSString *,id> *)options {
-    NSLog(@"url = %@", url);
-    
     return [[NXOAuth2AccountStore sharedStore] handleRedirectURL:url];
 }
 
